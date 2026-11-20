@@ -1,0 +1,197 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "glm::@417c2896647fdf63093d",
+					"jsonFile" : "target-glm-Debug-a0292f7b9b1702cc6a9e.json",
+					"name" : "glm",
+					"projectIndex" : 2
+				}
+			],
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-b23a0b23c080df4d29ba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "lib/sil",
+					"childIndexes" : 
+					[
+						2,
+						4
+					],
+					"jsonFile" : "directory-lib.sil-Debug-8d47d5174fc7f85c10f7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "lib/sil",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "lib/sil/lib/glm",
+					"childIndexes" : 
+					[
+						3
+					],
+					"jsonFile" : "directory-lib.sil.lib.glm-Debug-ecc4810bd31d9cc875b4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "lib/sil/lib/glm"
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"build" : "lib/sil/lib/glm/glm",
+					"jsonFile" : "directory-lib.sil.lib.glm.glm-Debug-a59184cf1afcc6eaab20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "lib/sil/lib/glm/glm"
+				},
+				{
+					"build" : "lib/sil/lib/img",
+					"jsonFile" : "directory-lib.sil.lib.img-Debug-86acfcf9e6645c593496.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "lib/sil/lib/img",
+					"targetIndexes" : 
+					[
+						1,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ImageEditor",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						4
+					],
+					"name" : "sil",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "glm",
+					"parentIndex" : 1
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ImageEditor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ImageEditor-Debug-add8dc9b23403a97d69c.json",
+					"name" : "ImageEditor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "img::@9728505c1cf5ff17dbeb",
+					"jsonFile" : "target-img-Debug-ba45db5b1a80705a11f6.json",
+					"name" : "img",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sil::@6318d866cc0f5e7f2986",
+					"jsonFile" : "target-sil-Debug-a8ed1782823ce5041635.json",
+					"name" : "sil",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "stb_image::@9728505c1cf5ff17dbeb",
+					"jsonFile" : "target-stb_image-Debug-2221686cb7801588ff1a.json",
+					"name" : "stb_image",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/Phuong/Desktop/S1-Prog-Workshop-main/build",
+		"source" : "/Users/Phuong/Desktop/S1-Prog-Workshop-main"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	}
+}

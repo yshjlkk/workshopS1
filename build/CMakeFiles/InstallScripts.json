@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/Phuong/Desktop/S1-Prog-Workshop-main/build/cmake_install.cmake",
+		"/Users/Phuong/Desktop/S1-Prog-Workshop-main/build/lib/sil/cmake_install.cmake",
+		"/Users/Phuong/Desktop/S1-Prog-Workshop-main/build/lib/sil/lib/glm/cmake_install.cmake",
+		"/Users/Phuong/Desktop/S1-Prog-Workshop-main/build/lib/sil/lib/glm/glm/cmake_install.cmake",
+		"/Users/Phuong/Desktop/S1-Prog-Workshop-main/build/lib/sil/lib/img/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

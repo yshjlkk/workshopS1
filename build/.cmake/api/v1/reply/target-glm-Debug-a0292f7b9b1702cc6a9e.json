@@ -1,0 +1,41 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library"
+		],
+		"files" : 
+		[
+			"lib/sil/lib/glm/glm/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 45,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"id" : "glm::@417c2896647fdf63093d",
+	"name" : "glm",
+	"paths" : 
+	{
+		"build" : "lib/sil/lib/glm/glm",
+		"source" : "lib/sil/lib/glm/glm"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}
