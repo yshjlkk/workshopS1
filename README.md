@@ -179,10 +179,10 @@ On répète un motif avec le modulo `%`
     </td>
     <td valign="top" width="65%">
       <p>C'est la même chose que la mosaïque normale, sauf qu'une case sur deux est retournée (comme dans un miroir).</p>
-      <p>Pour chaque pixel de l'image finale, on trouve d'abord quel pixel du motif on doit prendre : <code>new_x = (x * taille) % motif.width()</code>, pareil pour <code>y</code>. Le <code>taille</code> sert à réduire le motif pour qu'il se répète plus de fois.</p>
-      <p>Ensuite il faut savoir dans quelle case on est : <code>x * taille / motif.width()</code> (c'est une division entière donc ça donne le numéro de la case, 0, 1, 2...). Si le numéro est impair on retourne le pixel avec <code>new_x = motif.width() - 1 - new_x</code>, et sinon on le laisse comme il est.</p>
-      <p>!!le numéro de la case se calcule avec <code>x * taille</code> avant le modulo, sinon on a perdu l'info et on sait plus quelle case retourner</p>
-      <p>!!ne pas oublier le <code>- 1</code>, sinon sur le dernier pixel on sort du motif</p>
+      <p>Pour chaque pixel de l'image finale, on trouve d'abord quel pixel du motif on doit prendre : new_x = (x * taille) % motif.width(), pareil pour y. Le taille sert à réduire le motif pour qu'il se répète plus de fois.</p>
+      <p>Ensuite il faut savoir dans quelle case on est : x * taille / motif.width() (c'est une division entière donc ça donne le numéro de la case, 0, 1, 2...). Si le numéro est impair on retourne le pixel avec new_x = motif.width() - 1 - new_x, et sinon on le laisse comme il est.</p>
+      <p>!! Le numéro de la case se calcule avec x * taille avant le modulo, sinon on a perdu l'info et on sait plus quelle case retourner.</p>
+      <p>!! Ne pas oublier le - 1, sinon sur le dernier pixel on sort du motif.</p>
     </td>
   </tr>
 </table>
@@ -253,11 +253,12 @@ Trois versions avec `std::sort` et le même critère de luminosité, seul ce qu'
 </table>
 </div>
 
-Pour chaque pixel, on regarde 4 carrés autour de lui (haut gauche, haut droite, bas gauche, bas droite). Pour chaque carré, on calcule la couleur moyenne et la variance, ie a quel point les couleurs sont différentes de cette moyenne (avec glm::distance)
+Pour chaque pixel, on regarde 4 carrés autour de lui (haut gauche, haut droite, bas gauche, bas droite).  On calcule la couleur moyenne et la variance pour chaque carré,, ie à quel point les couleurs sont différentes de cette moyenne (avec glm::distance)
 
-On prend ensuite le carré le plus uniforme et le pixel prend sa couleur moyenne. Près d'un contour, un des carrés reste généralement d'un seul côté, ce qui évite de mélanger les couleurs des deux côtés
+On garde ensuite le carré qui a la plus petite variance (donc celui où les couleurs sont les plus proches entre elles). Le pixel prend alors la couleur moyenne de ce carré --> Ca permet de garder les contours sans mélanger les couleurs des deux côtés
 
 Points importants :
-- Les boucles commencent à rayon et se terminent à width - rayon pour ne pas sortir de l'image (les bords ne sont donc pas modifiés)
-- Plus le rayon est grand, plus le calcul est long
-Avec un rayon de 10 au lieu de 2, on a plus d'effet de peinture, mais on perd les petits détails
+- On utilise rayon pour définir la taille des 4 carrés autour du pixel
+- On garde la plus petite variance dans une variable min_variance pour savoir quel carré choisir
+- Les boucles commencent à rayon et se terminent à width - rayon (pareil pour height) pour ne pas sortir de l'image. Les bords ne sont donc pas modifiés
+- Plus le rayon est grand, plus le calcul est long. Avec un rayon de 10 au lieu de 2, on a plus d'effet de peinture, mais on perd les petits détails
