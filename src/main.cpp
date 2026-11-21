@@ -359,11 +359,9 @@ void rosace(sil::Image &image)
 
 
 // Fonction 15 : mosaique
-void mosaique(sil::Image &image)
+void mosaique(sil::Image &image, std::string chemin_motif, int taille)
 {
-    sil::Image motif{"images/logo.png"};
-
-    int taille = 2;
+    sil::Image motif{chemin_motif};
 
     for (int x = 0; x < image.width(); x++)
     {
@@ -722,6 +720,41 @@ void kuwahara(sil::Image &image, int rayon)
 
 
 
+// Fonction : animation rosace
+void animation_rosace(sil::Image &image)
+{
+    const double pi = 3.141592653589793;
+
+    int centre_x = 250;
+    int centre_y = 250;
+
+    int nbcercles = 8;
+    int d = 100;
+
+    for (int i = 0; i < 40; i++)
+    {
+        sil::Image new_image{image.width(), image.height()};
+
+        // on tourne la rosace
+        double rotation = i * 2.0 * pi / 40;
+
+        for (int j = 0; j < nbcercles; j++)
+        {
+            double angle = j * 2.0 * pi / nbcercles + rotation;
+
+            int x = centre_x + d * cos(angle);
+            int y = centre_y + d * sin(angle);
+
+            cercle(new_image, x, y);
+        }
+
+        new_image.save("output/rosacegif/image_" + std::to_string(i) + ".png");
+    }
+}
+
+
+
+
 int main()
 {
 
@@ -829,9 +862,18 @@ int main()
 
     {
     sil::Image image{500, 500};
-    mosaique(image);
-    image.save("output/mosaique.png");
-    }   
+    mosaique(image, "images/logo.png", 2);
+    image.save("output/mosaique1.png");
+}
+
+
+    {
+    sil::Image image{500, 500};
+    mosaique(image, "images/mosa.jpg", 3);
+    image.save("output/mosaique1.jpg");
+} 
+
+
 
 
     {
@@ -839,6 +881,8 @@ int main()
     mosaique_miroir(image);
     image.save("output/mosaique_miroir.png");
     }   
+
+    
 
 
     {
@@ -893,5 +937,12 @@ int main()
         image.save("output/kuwahara2.jpg");
     }
 
+
+    
+{
+    sil::Image image{500, 500};
+    animation_rosace(image);
+
+}
 
 }
