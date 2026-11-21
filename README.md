@@ -242,14 +242,14 @@ Trois versions avec `std::sort` et le même critère de luminosité, seul ce qu'
   </tr>
 </table>
 
-<table width="100%">
+<table width="100%" style="width:100%; table-layout:fixed;">
   <tr>
-    <td align="center" width="50%">
-      <strong>⭐⭐⭐⭐⭐ Kuwahara — Rayon 2</strong><br><br>
+    <td align="center" width="50%" style="text-align:center;">
+      <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 2</strong><br><br>
       <img src="output/kuwahara.jpg" width="250" height="250"><br><br>
     </td>
-    <td align="center" width="50%">
-      <strong>⭐⭐⭐⭐⭐ Kuwahara — Rayon 10</strong><br><br>
+    <td align="center" width="50%" style="text-align:center;">
+      <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 10</strong><br><br>
       <img src="output/kuwahara2.jpg" width="250" height="250"><br><br>
     </td>
   </tr>
