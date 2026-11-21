@@ -232,16 +232,19 @@ Trois versions avec `std::sort` et le même critère de luminosité, seul ce qu'
 
 ## 8. Filtres plus avancés
 
-<tr>
-  <td align="center" colspan="3" width="50%">
-    <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 2</strong><br><br>
-    <img src="output/kuwahara.jpg" width="250" height="250"><br><br>
-  </td>
-  <td align="center" colspan="3" width="50%">
-    <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 10</strong><br><br>
-    <img src="output/kuwahara2.jpg" width="250" height="250"><br><br>
-  </td>
-</tr>
+<table width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 2</strong><br><br>
+      <img src="output/kuwahara.jpg" width="250" height="250">
+    </td>
+
+    <td align="center" width="50%">
+      <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 10</strong><br><br>
+      <img src="output/kuwahara2.jpg" width="250" height="250">
+    </td>
+  </tr>
+</table>
 
   <tr>
     <td colspan="2">
