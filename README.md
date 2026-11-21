@@ -157,16 +157,19 @@ On répète un motif avec le modulo `%`
 
 <table width="100%">
   <tr>
-    <td align="center" width="50%">
+    <td align="center" valign="top" width="50%">
       <strong>⭐⭐ Mosaïque</strong><br><br>
-      <img src="output/mosaique1.png" width="200"><br><br>
+      <img src="output/mosaique1.png" width="180"><br><br>
       On multiplie les coordonnées puis on les ramène dans l'image du motif avec <code>%</code>
     </td>
-    <td align="center" width="50%">
+    <td align="center" valign="top" width="50%">
       <strong>⭐⭐ Mosaïque</strong><br><br>
-      <img src="output/mosaique1.jpg" width="200"><br><br>
+      <img src="output/mosaique1.jpg" width="180"><br><br>
+    </td>
   </tr>
 </table>
+
+
 
 <table>
   <tr>
@@ -216,15 +219,17 @@ Trois versions avec `std::sort` et le même critère de luminosité, seul ce qu'
 
 ## 7. Bruit
 
-<table>
+<div align="center">
+<table width="100%">
   <tr>
     <td align="center" width="100%">
-      <strong>⭐⭐  Image bruitée</strong><br><br>
+      <strong>⭐⭐ Image bruitée</strong><br><br>
       <img src="output/bruitee.png" width="180"><br><br>
       Chaque pixel a 10 % de chances d'être remplacé par une couleur aléatoire, ça donne un effet granuleux
     </td>
   </tr>
 </table>
+</div>
 
 ---
 
@@ -233,6 +238,7 @@ Trois versions avec `std::sort` et le même critère de luminosité, seul ce qu'
 
 ## 8. Filtres plus avancés
 
+<div align="center">
 <table width="100%">
   <tr>
     <td align="center" width="50%">
@@ -244,40 +250,14 @@ Trois versions avec `std::sort` et le même critère de luminosité, seul ce qu'
       <img src="output/kuwahara2.jpg" width="250" height="250">
     </td>
   </tr>
-  <tr>
-    <td colspan="2">
-      <p>
-        Pour chaque pixel, on regarde 4 carrés autour de lui
-        (haut gauche, haut droite, bas gauche, bas droite).
-        Pour chaque carré, on calcule la couleur moyenne et la variance,
-        c'est-à-dire à quel point les couleurs sont différentes de cette moyenne
-        (<code>glm::distance</code>).
-      </p>
-
-      <p>
-        On prend ensuite le carré le plus uniforme et le pixel prend sa
-        couleur moyenne. Près d'un contour, un des carrés reste généralement
-        d'un seul côté, ce qui évite de mélanger les couleurs des deux côtés.
-      </p>
-
-      <p><strong>Points importants :</strong></p>
-
-      <ul>
-        <li>
-          Les boucles commencent à <code>rayon</code> et se terminent à
-          <code>width - rayon</code> pour ne pas sortir de l'image
-          (les bords ne sont donc pas modifiés).
-        </li>
-        <li>
-          Plus le rayon est grand, plus le calcul est long.
-        </li>
-      </ul>
-
-      <p>
-        Avec un rayon de 10 au lieu de 2, on a plus d'effet de peinture,
-        mais on perd les petits détails.
-      </p>
-    </td>
-  </tr>
 </table>
+</div>
 
+Pour chaque pixel, on regarde 4 carrés autour de lui (haut gauche, haut droite, bas gauche, bas droite). Pour chaque carré, on calcule la couleur moyenne et la variance, ie a quel point les couleurs sont différentes de cette moyenne (avec glm::distance)
+
+On prend ensuite le carré le plus uniforme et le pixel prend sa couleur moyenne. Près d'un contour, un des carrés reste généralement d'un seul côté, ce qui évite de mélanger les couleurs des deux côtés
+
+Points importants :
+- Les boucles commencent à rayon et se terminent à width - rayon pour ne pas sortir de l'image (les bords ne sont donc pas modifiés)
+- Plus le rayon est grand, plus le calcul est long
+Avec un rayon de 10 au lieu de 2, on a plus d'effet de peinture, mais on perd les petits détails
