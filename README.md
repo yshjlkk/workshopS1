@@ -165,6 +165,7 @@ On répète un motif avec le modulo `%`
     <td align="center" valign="top" width="50%">
       <strong>⭐⭐ Mosaïque</strong><br><br>
       <img src="output/mosaique1.jpg" width="180"><br><br>
+      On applique le même principe avec un autre motif.
     </td>
   </tr>
 </table>
