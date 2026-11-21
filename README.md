@@ -232,28 +232,16 @@ Trois versions avec `std::sort` et le même critère de luminosité, seul ce qu'
 
 ## 8. Filtres plus avancés
 
-<table width="100%">
-  <tr>
-    <td align="center" width="100%">
-      <strong>⭐⭐⭐(⭐) Tramage</strong><br><br>
-      <img src="output/tramage.jpg" width="200"><br><br>
-      On compare la luminosité de chaque pixel à un seuil donné par une matrice de Bayer 4x4. Le pixel devient noir ou blanc.
-    </td>
-  </tr>
-</table>
-
-<table width="100%" style="width:100%; table-layout:fixed;">
-  <tr>
-    <td align="center" width="50%" style="text-align:center;">
-      <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 2</strong><br><br>
-      <img src="output/kuwahara.jpg" width="250" height="250"><br><br>
-    </td>
-    <td align="center" width="50%" style="text-align:center;">
-      <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 10</strong><br><br>
-      <img src="output/kuwahara2.jpg" width="250" height="250"><br><br>
-    </td>
-  </tr>
-</table>
+<tr>
+  <td align="center" colspan="3" width="50%">
+    <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 2</strong><br><br>
+    <img src="output/kuwahara.jpg" width="250" height="250"><br><br>
+  </td>
+  <td align="center" colspan="3" width="50%">
+    <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 10</strong><br><br>
+    <img src="output/kuwahara2.jpg" width="250" height="250"><br><br>
+  </td>
+</tr>
 
   <tr>
     <td colspan="2">
