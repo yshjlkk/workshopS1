@@ -230,6 +230,7 @@ Trois versions avec `std::sort` et le même critère de luminosité, seul ce qu'
 
 
 
+
 ## 8. Filtres plus avancés
 
 <table width="100%">
@@ -238,44 +239,45 @@ Trois versions avec `std::sort` et le même critère de luminosité, seul ce qu'
       <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 2</strong><br><br>
       <img src="output/kuwahara.jpg" width="250" height="250">
     </td>
-
     <td align="center" width="50%">
       <strong>⭐⭐⭐⭐⭐ Kuwahara - Rayon 10</strong><br><br>
       <img src="output/kuwahara2.jpg" width="250" height="250">
     </td>
   </tr>
-</table>
-
   <tr>
     <td colspan="2">
-  <p>
-    Pour chaque pixel, on regarde 4 carrés autour de lui
-    (haut gauche, haut droite, bas gauche, bas droite).
-    Pour chaque carré, on calcule la couleur moyenne et la variance,
-    ie à quel point les couleurs sont différentes de cette moyenne
-    (<code>glm::distance</code>).
-  </p>
+      <p>
+        Pour chaque pixel, on regarde 4 carrés autour de lui
+        (haut gauche, haut droite, bas gauche, bas droite).
+        Pour chaque carré, on calcule la couleur moyenne et la variance,
+        c'est-à-dire à quel point les couleurs sont différentes de cette moyenne
+        (<code>glm::distance</code>).
+      </p>
 
-  <p>
-    On prends ensuite le carré le plus uniforme et le pixel prend sa
-    couleur moyenne. Près d'un contour, un des carrés reste généralement
-    d'un seul côté, ce qui évite de mélanger les couleurs des deux côtés.
-  </p>
+      <p>
+        On prend ensuite le carré le plus uniforme et le pixel prend sa
+        couleur moyenne. Près d'un contour, un des carrés reste généralement
+        d'un seul côté, ce qui évite de mélanger les couleurs des deux côtés.
+      </p>
 
-  <p><strong>Point importants :</strong></p>
+      <p><strong>Points importants :</strong></p>
 
-  <ul>
-    <li>
-      Les boucles commencent à <code>rayon</code> et se terminent à
-      <code>width - rayon</code> pour ne pas sortir de l'image 
-      (les bords ne sont donc pas modifiés.)
-    </li>
-    <li>
-      Plus le rayon est grand, plus le calcul est long
-    </li>
-  </ul>
+      <ul>
+        <li>
+          Les boucles commencent à <code>rayon</code> et se terminent à
+          <code>width - rayon</code> pour ne pas sortir de l'image
+          (les bords ne sont donc pas modifiés).
+        </li>
+        <li>
+          Plus le rayon est grand, plus le calcul est long.
+        </li>
+      </ul>
 
-  <p>
-    Avec un rayon de 10 au lieu de 2, on a plus effet de peinture, mais on perd les petits détails.
-  </p>
-</td>
+      <p>
+        Avec un rayon de 10 au lieu de 2, on a plus d'effet de peinture,
+        mais on perd les petits détails.
+      </p>
+    </td>
+  </tr>
+</table>
+
